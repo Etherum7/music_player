@@ -1,0 +1,17 @@
+.AllMusic {
+  height: 100%;
+  display: flex;
+}
+.List {
+  width: 100%;
+}
+.Operation {
+  width: 100%;
+}
+.Recommendations {
+  text-align: center;
+  margin-right: 20px;
+}
+.Currently {
+  text-align: center;
+}

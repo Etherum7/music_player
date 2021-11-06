@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import { music } from "./data/data";
+import dll from "./scripts/dll";
+import AllMusic from "./components/AllMusic/AllMusic.component";
+import Player from "./components/Player/Player.component";
 
 function App() {
+  const [queue, setQueue] = useState(dll.getAllNodes());
+  const [data, setData] = useState(music);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AllMusic
+        queue={queue}
+        data={data}
+        handleQueue={(arr) => setQueue(arr)}
+        handleData={(arr) => setData(arr)}
+      />
+      <Player
+        data={
+          queue.length
+            ? queue
+            : [
+                {
+                  name: "Risen",
+                  id: 0,
+                  link: "https://files.freemusicarchive.org/storage-freemusicarchive-org/tracks/yavKnIN3s6oa3EfiwzzNyPMZTy628UONGK7ahpMq.mp3",
+                },
+              ]
+        }
+      />
     </div>
   );
 }

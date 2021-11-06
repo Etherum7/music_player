@@ -1,0 +1,32 @@
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.9)
+  );
+  padding: 20px 20px;
+  margin: 5px;
+  border-radius: 2px;
+  color: #eee;
+}
+.listItem1 {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(255, 222, 75, 0.6),
+    rgba(252, 187, 48, 0.9)
+  );
+  padding: 20px 20px;
+  margin: 5px;
+  border-radius: 2px;
+  color: #222;
+}
+.btn-add:hover {
+  transform: scale(1.2);
+  transition: all 0.1s;
+}

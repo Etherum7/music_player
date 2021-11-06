@@ -1,0 +1,28 @@
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* margin-bottom: 25px; */
+}
+.info {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color:white;
+  font-weight: 700;
+
+}
+.control {
+  width: 200px;
+
+  display: flex;
+  justify-content: space-between;
+}
+.btn:hover{
+  transform:scale(1.2);
+  transition:all 0.2s;
+}
